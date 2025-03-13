@@ -394,7 +394,7 @@
 
     </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
     
     @include('layouts.header')
 
