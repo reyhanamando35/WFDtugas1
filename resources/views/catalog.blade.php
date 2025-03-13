@@ -3,7 +3,7 @@
 @section('title', 'Catalog')
 
 @section('content')
-<div class="p-10">
+<div class="p-10 overflow-hidden">
     <div class="p-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div class="max-h-md bg-white border border-gray-200 rounded-lg shadow ">
@@ -34,7 +34,7 @@
                         Rumah guedhe soro
                     </p>
                     <p class="mb-3 font-bold text-gray-700 ">
-                        Rp 2.000.000.000
+                        Rp 1.000.000.000
                     </p>
                 </div>
             </div>   
@@ -44,13 +44,13 @@
                 </a>
                 <div class="p-5">
                     <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Rumah Royal Residence</h5>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Rumah Barata Jaya</h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 ">
                         Rumah besar dan luas
                     </p>
                     <p class="mb-3 font-bold text-gray-700 ">
-                        Rp 1.000.000.000
+                        Rp 2.000.000.000
                     </p>
                 </div>
             </div>  
@@ -60,7 +60,7 @@
                 </a>
                 <div class="p-5">
                     <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Rumah Royal Residence</h5>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Rumah Citraland</h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 ">
                         Rumah cukup besar 
@@ -70,6 +70,39 @@
                     </p>
                 </div>
             </div>   
+            <div class="max-h-md bg-white border border-gray-200 rounded-lg shadow ">
+                <a href="#">
+                    <img class="rounded-t-lg w-full h-80 object-cover" src="rumah5.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Rumah Northwest</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 ">
+                        Rumah cukup besar 
+                    </p>
+                    <p class="mb-3 font-bold text-gray-700 ">
+                        Rp 7.000.000.000
+                    </p>
+                </div>
+            </div>   
+            <div class="max-h-md bg-white border border-gray-200 rounded-lg shadow ">
+                <a href="#">
+                    <img class="rounded-t-lg w-full h-80 object-cover" src="rumah6.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Pertamina Nginden</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 ">
+                        Rumah yang bisa jual bensin 
+                    </p>
+                    <p class="mb-3 font-bold text-gray-700 ">
+                        Rp 20.000.000.000
+                    </p>
+                </div>
+            </div>   
+
         </div>
     </div>
 </div>

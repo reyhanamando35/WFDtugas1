@@ -85,12 +85,12 @@
             overflow: hidden;
             }
 
-            .isi {
+            /* .isi {
             width: 1000px;
             height: 500px;
             margin: auto;
             overflow: hidden;
-            }
+            } */
 
             .isi_gambar {
             width: 25%;
@@ -125,7 +125,7 @@
 
 <section id="slider" class="section-slider p-6">
     <div class="utama">
-        <div class="isi">
+        <div class="w-full md:max-w-screen-lg h-[200px] mx-auto overflow-hidden sm:h-[500px] md:h-[550px]">
             <div class="isi2" id="slide">
                 <div class="isi_gambar">
                     <img id="slide" class="object-cover" src="{{ asset('rumah1.jpg') }}">
@@ -147,11 +147,11 @@
 </section>
 
 
-<div class="relative bg-gradient-to-r from-white to-gray-100 text-yellow-300 text-center py-5 font-extrabold text-2xl rounded-lg shadow-lg mt-10 mx-4 border-2 border-yellow-500 animate-glow">
+<div class="relative bg-gradient-to-r from-white to-gray-100 text-center py-5 font-extrabold text-2xl rounded-lg shadow-lg mt-10 mx-4 border-2 border-yellow-500 animate-glow">
     <p class="tracking-wide uppercase drop-shadow-lg">
         ✨ Only at <span class="text-yellow-400">HanHome</span> ✨  
     </p>
-    <p class="text-sm text-yellow-200 mt-2 italic">
+    <p class="text-sm mt-2 italic">
         🏃‍♂️ Temukan rumah impian Anda hanya di Han Home – solusi properti terbaik untuk setiap kebutuhan Anda!
     </p>
 </div>

@@ -1,28 +1,154 @@
-<nav class="bg-gradient-to-r from-amber-400 to-yellow-300 border-gray-200">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a class="flex items-center space-x-3 rtl:space-x-reverse">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
-          <span class="self-center text-2xl  rounded-lg font-bold whitespace-nowrap dark:text-white">🏠HanHome</span>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
-      <div class="ml-auto flex items-center mr-5">
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <a href="{{ route('home') }}" class="px-4 py-2 hover:bg-black hover:text-white rounded-lg font-bold">Home</a>
-            </li>
-            <li>
-              <a href="{{ route('catalog') }}" class="px-4 py-2 hover:bg-black hover:text-white rounded-lg font-bold">Catalog</a>
-            </li>
-            <li>
-              <a href="#" class="px-4 py-2 hover:bg-black hover:text-white rounded-lg font-bold">About Us</a>
-            </li>
-          </ul>
-        </div>
+.container {
+  font-family: 'Merriweather', serif;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.mobile {
+  margin: auto;
+  background: #333;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.nav {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: 
+}
+
+.bars {
+  position: absolute;
+  height: 13px;
+  width: 21px;
+  top: 17px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bars span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: rgb(0, 0, 0);
+}
+
+.bar-2, .bar-3 {
+  margin-top: 3px;
+}
+
+.bar-1, .bar-3 {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+
+.menu-item {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  background: rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  width: 400px;
+  height: 450px;
+  border-bottom-left-radius: 200px;
+  margin-right: -200px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+
+.item-list {
+  position: absolute;
+  top: 250px;
+  right: 250px;
+  color: #000000;
+  margin-right: -200px;
+  transition: 1s all;
+  -webkit-transition: 1s all;
+  -moz-transition: 1s all;
+  -o-transition: 1s all;
+  
+}
+
+.item-list li {
+  list-style: none;
+  font-size: large;
+  margin-bottom: 1rem;
+}
+
+.greet {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.greet p {
+  color: #030303;
+  font-size: 60%;
+  letter-spacing: 1px;
+}
+
+.greet span a {
+  color: #5C6BC0;
+  letter-spacing: 2px;
+}
+</style>
+<div class="nav bg-gradient-to-r from-amber-400 to-yellow-300">
+      <div class="bars clickable-bar" data-clicked="0">
+        <span class="bar-1"></span>
+        <span class="bar-2"></span>
+        <span class="bar-3"></span>
+      </div>
+      <div class="menu-item">
+        <ul class="item-list">
+          <li>
+            <a href="{{ route('home') }}" class="px-2 py-2 hover:bg-black hover:text-white rounded-lg font-bold">Home</a>
+          </li>
+          <li>
+            <a href="{{ route('catalog') }}" class="px-2 py-2 hover:bg-black hover:text-white rounded-lg font-bold">Catalog</a>
+          </li>
+          <li>
+            <a href="{{ route('about') }}" class="px-2 py-2 hover:bg-black hover:text-white rounded-lg font-bold">About Us</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+    <script>
+      let bars = document.querySelector('.clickable-bar');
+let bar_one = document.querySelector('.bar-1');
+let bar_two = document.querySelector('.bar-2');
+let bar_three = document.querySelector('.bar-3');
+let menu_item = document.querySelector('.menu-item');
+let item_list = document.querySelector('.item-list');
+bars.addEventListener('click', function() {
+  if(bars.dataset.clicked === '0') {
+    bar_two.style.visibility = 'hidden';
+    bar_one.style.transform = 'rotate(-40deg)';
+    bar_one.style.marginTop = '7px';
+    bar_three.style.transform = 'rotate(40deg)';
+    bar_three.style.marginTop = '-7px';
+    menu_item.style.marginRight = '0px';
+    item_list.style.marginRight = '0px';
+    bars.dataset.clicked = '1';
+  } else {
+    bar_one.removeAttribute('style');
+    bar_three.removeAttribute('style');
+    bar_two.style.visibility = 'visible';
+    menu_item.style.marginRight = '-200px';
+    item_list.style.marginRight = '-200px';
+    bars.dataset.clicked = '0';
+  }
+  
+});
+</script>

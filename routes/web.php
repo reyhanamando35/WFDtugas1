@@ -6,10 +6,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/home', function () {
+Route::get('/catalog', function () {
     return view('catalog');
 })->name('catalog');
 
-// Route::get('/', function () {
-//     return view('about');
-// })->name('about');
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
